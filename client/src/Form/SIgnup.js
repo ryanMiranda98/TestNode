@@ -5,7 +5,7 @@ const SIgnup = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     async function fetchUsers() {
-      const res = await axios.get("http://15.207.88.100:5000/api/users", {
+      const res = await axios.get("http://15.207.88.100/api/users", {
         headers: { "Content-Type": "application/json" },
       });
       // console.log(res);
@@ -33,7 +33,7 @@ const SIgnup = () => {
     console.log(info)
 
     try {
-      const res = await axios.post("http://15.207.88.100:5000/api/users/signup", info, {
+      const res = await axios.post("http://15.207.88.100/api/users/signup", info, {
         headers: { "Content-Type": "application/json" },
       });
 
