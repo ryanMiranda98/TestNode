@@ -6,9 +6,7 @@ const path = require("path");
 app.use(
   cors({
     credentials: true,
-    origin: [
-      "http://localhost:3000",
-    ],
+    origin: ["http://localhost:3000"],
   })
 );
 
@@ -20,6 +18,13 @@ app.get("/", function (req, res) {
 
 // Body Parser
 app.use(express.json());
+
+app.get("/test", function (req, res) {
+  res.status(200).json({
+    status: "success",
+    data: "Hello world",
+  });
+});
 
 // User routes
 const userRoute = require("./routes/userRoute");
